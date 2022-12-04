@@ -19,9 +19,7 @@ export default {
   methods: {
     async newBak() {
       const name = this.name;
-      await this.axios.post(`/bak`, {
-        name
-      })
+      await this.axios.post(`/bak`, name)
           .then((response) => {
             console.log(response.data);
           })
