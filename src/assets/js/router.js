@@ -1,5 +1,6 @@
 import Home from "@/components/views/Home";
 import {createRouter, createWebHistory} from 'vue-router'
+import Leaderboard from "@/components/views/Leaderboard.vue";
 
 const routes = [
   {
@@ -20,6 +21,24 @@ const routes = [
       ]
     }
   },
+  {
+    path: '/leaderboard',
+    name: 'leaderboard',
+    component: Leaderboard,
+    meta: {
+      title: 'Leaderboard - Bak Tracker',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'The leaderboard of the Bak Tracker application.'
+        },
+        {
+          property: 'og:description',
+          content: 'The leaderboard of the Bak Tracker application.'
+        }
+      ]
+    }
+  }
 ]
 
 const router = createRouter({

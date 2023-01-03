@@ -8,6 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <router-link class="nav-link" :to="{name: 'home'}">Home</router-link>
+          <router-link class="nav-link" :to="{name: 'leaderboard'}">Leaderboard</router-link>
         </div>
       </div>
     </div>
