@@ -12,7 +12,7 @@ export const useAttemptGroupStore = defineStore('attemptGroup', {
   },
   actions: {
     async fetchAttempts() {
-      await axios.get(`/attempt-groups/${this.groupId}/attempts`)
+      await axios.get(`http://localhost:3000/api/v1/attempt-groups/${this.groupId}/attempts`)
         .then((response) => {
           this.attempts = response.data;
         })
@@ -21,5 +21,4 @@ export const useAttemptGroupStore = defineStore('attemptGroup', {
         })
     }
   }
-
 })
