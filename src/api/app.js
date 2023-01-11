@@ -24,6 +24,9 @@ app.get('/', (req, res) => {
 
 // Use attempt group routes
 const attemptGroupRoutes = require('./src/routes/attemptGroup.routes');
-app.use('/api/v1/attempt-groups', attemptGroupRoutes)
+app.use('/api/v1/attempt-groups', attemptGroupRoutes);
+
+const attemptRoutes = require('./src/routes/attempt.routes');
+app.use('/api/v1/attempts', attemptRoutes);
 
 http.createServer(app).listen(port);

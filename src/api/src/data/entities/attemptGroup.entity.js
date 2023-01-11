@@ -16,4 +16,15 @@ AttemptGroup.getAttempts = function (id, result) {
   })
 }
 
+AttemptGroup.insertAttempt = function (groupId, attemptId, result) {
+  dbConnector.query("INSERT INTO attempts_in_group VALUES (?, ?)", [groupId, attemptId], function (err, res) {
+    if(err) {
+      console.log("error: ", err);
+      result(err, null);
+    } else {
+      result(null, res);
+    }
+  })
+}
+
 module.exports = AttemptGroup;
